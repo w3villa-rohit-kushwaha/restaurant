@@ -1,0 +1,79 @@
+/* Styles for the review form with errors */
+.form-with-errors {
+    border: 2px solid red;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  .form-with-errors h2 {
+    color: red;
+    font-size: 18px;
+  }
+
+  .form-with-errors ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  .form-with-errors li {
+    color: red;
+    margin-bottom: 5px;
+  }
+
+  /* Styles for the "Reviews and Feedbacks" heading */
+  .r-div {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  /* Styles for the review form container */
+  .pack-review {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    width: 50%;
+    margin: 0 auto; /* Center the review form */
+  }
+
+  /* Styles for form fields */
+  .field {
+    margin-bottom: 20px;
+  }
+
+  .field label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .field textarea,
+  .field input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  /* Styles for the form actions */
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* Styles for the "Submit Review" button */
+  .new-restaurant-button {
+    padding: 5px 10px;
+    background-color: #4caf50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+  }
+  .rating-input{
+    position: relative;
+    width: fit-content;
+    width: 100px !important;
+  }

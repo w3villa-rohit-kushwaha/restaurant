@@ -1,0 +1,15 @@
+<!-- app/views/dishes/_form.html.erb -->
+<%= form_with(model: [@restaurant, @dish], url: restaurant_dishes_path(@restaurant)) do |form| %>
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <!-- Add other fields as needed -->
+
+
+    <%= form.submit 'Submit'%>
+
+<% end %>
+
+

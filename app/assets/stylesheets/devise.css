@@ -1,0 +1,85 @@
+/* app/assets/stylesheets/devise.css.scss */
+
+/* Styles for the form container */
+#signup-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  /* Styles for the form fields */
+  .field {
+    margin-bottom: 10px;
+  }
+
+  /* Styles for labels */
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  /* Styles for input fields */
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  /* Styles for the submit button */
+  .actions {
+    margin-top: 15px;
+  }
+
+  /* Style the error messages */
+  #error_explanation {
+    color: #f00;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+/* app/assets/stylesheets/devise.css.scss */
+
+/* Styles for the form container */
+#login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  /* Styles for the form fields */
+  .field {
+    margin-bottom: 10px;
+  }
+
+  /* Styles for labels */
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  /* Styles for input fields */
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  /* Styles for the "Remember Me" checkbox */
+  .remember_me {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Styles for the submit button */
+  .actions {
+    margin-top: 15px;
+  }

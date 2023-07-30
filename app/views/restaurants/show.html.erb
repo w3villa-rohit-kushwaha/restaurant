@@ -1,0 +1,53 @@
+<!-- app/views/restaurants/show.html.erb -->
+<h1 class="restaurant-name"><%= @restaurant.name %></h1>
+<p class="restaurant-status">Status: <%= @restaurant.status %></p>
+
+
+<!-- Display the list of dishes for the restaurant -->
+<% if @restaurant.dishes.any? %>
+  <h2 class="dishes-heading">Dishes:</h2>
+  <ul class="dishes-list">
+    <% @restaurant.dishes.each do |dish| %>
+      <li class="dish-item"><%= link_to dish.name, dish_path(dish), class: "dish-link" %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p class="no-dishes">No dishes available.</p>
+<% end %>
+
+
+
+<% if current_user&.admin? %>
+  <%= form_with(model: @restaurant, url: update_status_restaurant_path(@restaurant), method: :patch, class: "status-form") do |form| %>
+    <div class="field">
+      <%= form.label :status, class: "status-label" %>
+      <%= form.select :status, options_for_select(%w[open closed], @restaurant.status), class: "status-select" %>
+    </div>
+
+    <div>
+      <%= form.submit 'Update Status', class: "status-update-button" %>
+    </div>
+  <% end %>
+<% end %>
+
+<!-- Render the new review form for the restaurant -->
+<%= render 'reviews/form', reviewable: @restaurant, review: @restaurant.reviews.new %>
+
+<!-- Display existing reviews for the restaurant -->
+<% if @restaurant.reviews.any? %>
+  <h2 class="reviews-heading">Reviews:</h2>
+  <ul class="reviews-list">
+    <% @restaurant.reviews.each do |review| %>
+      <li class="review-item">
+        <strong class="review-rating">Rating:</strong> <%= review.rating %>
+        <p class="review-content"><%= review.content %></p>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p class="no-reviews">No reviews yet.</p>
+<% end %>
+
+<% if current_user&.admin? %>
+  <%= link_to 'Add Dish', new_restaurant_dish_path(@restaurant), class: "add-dish-link" %>
+<% end %>

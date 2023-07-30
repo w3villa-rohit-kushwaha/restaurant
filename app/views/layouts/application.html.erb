@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+
+</head>
+<body>
+
+  <% if notice.present? %>
+    <div class="notice">
+      <%= notice %>
+    </div>
+  <% end %>
+
+  <% if alert.present? %>
+    <div class="alert">
+      <%= alert %>
+    </div>
+  <% end %>
+
+  <%= yield %>
+</body>
+<script>
+  console.log('Hello World from Webpacker')
+// Function to remove the flash messages after 5 seconds
+function removeFlashMessages() {
+    setTimeout(function () {
+      var flashMessages = document.querySelectorAll('.notice, .alert');
+      flashMessages.forEach(function (message) {
+        message.classList.add('fade-out');
+        setTimeout(function () {
+          message.remove();
+        }, 1000); // Wait 1 second after the animation is finished before removing the element
+      });
+    }, 3000); // Remove the messages after 3 seconds
+  }
+
+  // Run the function when the DOM is ready
+  document.addEventListener('DOMContentLoaded', function () {
+    removeFlashMessages();
+  });
+
+  </script>
+</html>

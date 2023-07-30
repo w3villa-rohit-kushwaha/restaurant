@@ -1,0 +1,24 @@
+<!-- Dish Show Page (app/views/dishes/show.html.erb) -->
+
+<h1><%= @dish.name %></h1>
+<p>Restaurant: <%= @dish.restaurant.name %></p>
+
+<%= render 'reviews/form', reviewable: @dish, review: Review.new %>
+
+<% if @dish.reviews.any? %>
+  <h2>Reviews:</h2>
+  <ul>
+    <% @dish.reviews.each do |review| %>
+      <li>
+        <strong>Rating:</strong> <%= review.rating %>
+        <p><%= review.content %></p>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No reviews yet.</p>
+<% end %>
+
+<% if current_user&.admin? %>
+  <%= link_to 'Edit Dish', edit_dish_path(@dish) %>
+<% end %>

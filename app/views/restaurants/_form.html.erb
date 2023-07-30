@@ -1,0 +1,24 @@
+<%= form_with(model: restaurant, class: "restaurant-form") do |form| %>
+  <!-- Common fields for all users -->
+  <div class="restaurant-form__field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="restaurant-form__field">
+    <%= form.label :status %>
+    <%= form.text_field :status %>
+  </div>
+
+  <!-- Fields only visible to admins -->
+  <% if current_user&.admin? %>
+    <div class="restaurant-form__field restaurant-form__admin-field admin-visible">
+      <%= form.label :admin_field %>
+      <%= form.text_field :admin_field %>
+    </div>
+  <% end %>
+
+  <div class="restaurant-form__actions">
+    <%= form.submit 'Submit' %>
+  </div>
+<% end %>

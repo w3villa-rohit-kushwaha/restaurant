@@ -1,0 +1,128 @@
+/* app/assets/stylesheets/restaurants.scss */
+
+/* Styles for the restaurant name */
+.restaurant-name {
+    font-size: 38px;
+    font-weight: bold;
+    text-align: center;
+    color: #124b04;
+    margin-bottom: 20px;
+  }
+
+  /* Styles for the restaurant status */
+  .restaurant-status {
+    color: #124b04;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  /* Styles for the status form */
+  .status-form {
+    margin-top: 20px;
+  }
+
+  /* Styles for the status label */
+  .status-label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  /* Styles for the status select dropdown */
+  .status-select {
+    width: 200px;
+    padding: 5px;
+    margin-right: 10px;
+  }
+
+  /* Styles for the status update button */
+  .status-update-button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+ /* Styles for reviews section */
+.reviews-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  .reviews-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  .review-item {
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  .review-rating {
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  .review-content {
+    color: #333;
+  }
+
+  .no-reviews {
+    font-style: italic;
+    color: #666;
+    margin-top: 10px;
+  }
+
+
+  /* Hover effect for review cards */
+  .review-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+/* Styles for the dishes section */
+.dishes-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  .dishes-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .dish-item {
+    margin-bottom: 10px;
+  }
+
+  .dish-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Hover effect for the dish link */
+  .dish-link:hover {
+    color: #124b04;
+    background-color: #d4edda;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+  }
+

@@ -1,0 +1,115 @@
+/* Styles for the main heading */
+.main-heading {
+  font-size: 38px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #124b04;
+}
+
+/* Styles for the user info section */
+.user-info {
+  color: #124b04;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(228, 234, 230);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 25px;
+  font-weight: 700;
+  padding: 10px;
+}
+
+/* Styles for the "Sign Out" link */
+.sign-out-link {
+  color: rgb(245, 242, 242);
+  text-decoration: none;
+  margin-right: 10px;
+  padding: 15px;
+  background-color: red;
+  border-radius: 20px;
+  font-size: 25px;
+  position: absolute;
+  margin-top: 10px;
+}
+
+/* Styles for the authentication links */
+.auth-links a {
+  text-decoration: none;
+  margin-right: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+}
+
+/* Styles for the filter form */
+.filter-form {
+  margin-bottom: 20px;
+}
+
+/* Styles for the filter label */
+.filter-form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Styles for the filter select dropdown */
+.filter-form select {
+  width: 200px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+/* Styles for the filter submit button */
+.filter-form input[type="submit"] {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Styles for the restaurant list */
+.restaurant-list {
+  list-style: none;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styles for each restaurant item */
+.restaurant-list li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Styles for the restaurant link */
+.restaurant-list li a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Hover effect for the restaurant link */
+.restaurant-list li a:hover {
+  text-decoration: underline;
+}
+
+/* Styles for the "New Restaurant" link (visible only to admins) */
+.new-restaurant-link {
+  margin-top: 20px;
+}
+
+/* Styles for the "New Restaurant" button */
+.new-restaurant-button {
+  padding: 5px 10px;
+  background-color: #4caf50;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+}

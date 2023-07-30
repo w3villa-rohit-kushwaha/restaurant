@@ -1,0 +1,13 @@
+<h1>Dishes</h1>
+
+<ul>
+  <% @dishes.each do |dish| %>
+    <li>
+      <%= link_to dish.name, dish %>
+    </li>
+  <% end %>
+</ul>
+
+<% if current_user&.admin? %>
+  <%= link_to 'New Dish', new_dish_path %>
+<% end %>
